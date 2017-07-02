@@ -1,0 +1,28 @@
+{
+  "name": "HMww",
+  "version": "1.0.0",
+  "description": "Theme for my podcast",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmies/herr-mies-wills-wissen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dmies/herr-mies-wills-wissen/issues"
+  },
+  "homepage": "https://github.com/dmies/herr-mies-wills-wissen#readme",
+  "devDependencies": {
+    "font-awesome": "4.7.0",
+    "gulp": "3.9.1",
+    "gulp-less": "3.3.2"
+  },
+  "dependencies": {
+    "normalize.less": "^1.0.0"
+  }
+}
