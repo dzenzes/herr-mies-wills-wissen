@@ -34,7 +34,7 @@
 	            </a>
 	        </li>
 	        <li class="social_item">
-	            <a href="http://207.154.227.187/feed/mp3/" title="Podcast ESS Feed" class="social_link">
+	            <a href="https://mies.me/feed/mp3/" title="Podcast ESS Feed" class="social_link">
 	                <i class="fa fa-podcast"></i>
 	            </a>
 	        </li>
