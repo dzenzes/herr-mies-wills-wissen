@@ -5,7 +5,7 @@
 		<h2 class="hello_title">Hallo!</h2>
 		<div class="hello_entry">
 			<p><b><i>Herr Mies will's wissen</i></b> ist die zweiwöchige Interview-Reihe rund um IT Themen von und mit Daniel Mies.</p>
-			<p>Der Podcast kann via RSS <a class="hello_abo" href="https://mies.me/feed/mp3/">abonniert</a> werden. Eine iTunes Einbindung ist in Arbeit.</p>
+			<p>Der Podcast kann via <a class="hello_abo" href="https://mies.me/feed/mp3/">RSS</a> abonniert werden und ist ebenfalls im <a class="hello_abo" href="https://itunes.apple.com/de/podcast/herr-mies-wills-wissen/id1257454170?l=en">iTunes Store</a> gelistet.</p>
 			<hr />
 		</div>
 	</div>
