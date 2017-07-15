@@ -17,7 +17,7 @@
 <div class="dmi">
 	<div class="header">
 		<h1 class="header_title">
-			<a  class="header_link" href="/" title="Daniel Mies"><strong class="header_link-highlighted">Herr Mies</strong> will's wissen</a>
+			<a  class="header_link" href="/" title="Herr Mies will's wissen">Herr Mies will's wissen</a>
 		</h1>
 	</div>
 
