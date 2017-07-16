@@ -190,9 +190,9 @@ a.hello_abo{
 
 
 .page {
-	margin: 0 64px;
-	margin-bottom: 24px;
-	padding-bottom: 24px;
+	margin: 64px auto 32px;
+	padding-bottom: 32px;
+	width: 50%;
 	border-bottom: 1px solid #ccc;
 	
 	&_title{
@@ -202,6 +202,22 @@ a.hello_abo{
 	}
 	&_entry{
 		margin:32px 0;
+	}
+}
+
+@media only screen and (max-width: 736px) {
+	.page{
+		margin: 32px auto 16px;
+		padding-bottom: 16px;
+		width:90%;
+	}
+}
+
+@media only screen 
+and (min-device-width : 731px) 
+and (max-device-width : 1024px)  {
+	.page{
+		width:75%;
 	}
 }
 

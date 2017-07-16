@@ -1,7 +1,7 @@
 <?php
 
 function hmww_enqueue_styles() {
-	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css?v=160717-3' );
+	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css?v=160717-5' );
 }
 
 function hmww_enqueue_scripts() {
