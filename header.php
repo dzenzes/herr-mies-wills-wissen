@@ -56,7 +56,7 @@
 	            </a>
 	        </li>
 	        <li class="social_item">
-	            <a href="/atom.xml" title="Subscribe RSS Feed+" class="social_link">
+	            <a href="/feed" title="Subscribe RSS Feed+" class="social_link">
 	                <i class="fa fa-rss"></i>
 	            </a>
 	        </li>
