@@ -41,7 +41,7 @@
 	<div class="social">
 	    <ul class="social_list">
 	        <li class="social_item">
-	            <a href="https://twitter.com/danielmies" title="Follow me on Twitter" class="social_link">
+	            <a href="https://twitter.com/herrmies" title="Follow me on Twitter" class="social_link">
 	                <i class="fa fa-twitter"></i>
 				</a>
 			</li>
