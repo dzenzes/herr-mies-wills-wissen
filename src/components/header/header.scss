@@ -1,0 +1,22 @@
+@import "../../styles/palette";
+
+.header {
+  background: $navigationBg;
+  box-shadow: inset 0 -10px 10px -10px $text;
+
+  &__container {
+    margin: 0 auto;
+    width: 65%;
+    min-width: 650px;
+  }
+}
+
+@media (max-width: 920px) {
+  .header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: inset 0 10px 10px -10px $text;
+  }
+}

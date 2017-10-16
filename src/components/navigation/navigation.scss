@@ -1,0 +1,65 @@
+@import "../../styles/palette";
+
+.navigation {
+
+  &__list {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(4, 25%);
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+
+    a {
+      display: block;
+      margin: 6px 12px;
+      padding: 12px 0;
+      font-size: 18px;
+      text-align: center;
+      color: $background;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        text-decoration: none;
+        border-color: $background;
+      }
+    }
+
+    &--active {
+
+      a {
+        background: $background;
+        color: $text;
+        border-color: $background;
+        padding: 12px 12px 18px;
+        margin:6px 0 0 ;
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 920px) {
+  .navigation {
+    &__list {
+    }
+    &__item {
+      &--active {
+
+        a {
+          background: $background;
+          color: $text;
+          border-color: $background;
+          padding: 18px 12px 12px;
+          margin:0 6px 0;
+        }
+      }
+    }
+    &__text {
+      display: none;
+    }
+  }
+}

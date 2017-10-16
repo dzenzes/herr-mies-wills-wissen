@@ -1,0 +1,19 @@
+@import "palette";
+
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0;
+
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Rubik', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: $background;
+  color: $text;
+
+}
