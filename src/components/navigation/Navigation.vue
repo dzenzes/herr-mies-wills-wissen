@@ -5,7 +5,9 @@
                 <ul class="navigation__list">
                     <li v-for="(item, index) in items" class="navigation__item" :class="{ 'navigation__item--active': item.active }">
                         <a :href="item.link" :title="item.title">
-                            <i :class="'fa fa-'+item.icon"></i>&nbsp;<span class="navigation__text">{{item.text}}</span></a>
+                            <i :class="'fa fa-'+item.icon"></i>&nbsp;
+                            <span class="navigation__text">{{item.text}}</span>
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -23,6 +25,12 @@ export default {
 
             },
             {
+                link: 'https://mies.me/feed/mp3/',
+                title: 'Herr Mies will\'s wissen Podcast Feed',
+                icon: 'podcast',
+                text: 'Podcast'
+            },
+            {
                 link: 'https://twitter.com/herrmies',
                 title: 'Herr Mies will\'s wissen auf Twitter',
                 icon: 'twitter',
@@ -34,12 +42,7 @@ export default {
                 icon: 'github',
                 text: 'GitHub'
             },
-            {
-                link: 'https://mies.me/feed/mp3/',
-                title: 'Herr Mies will\'s wissen Podcast Feed',
-                icon: 'podcast',
-                text: 'Podcast'
-            },
+
         ]
     })
 }

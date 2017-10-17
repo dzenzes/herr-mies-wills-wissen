@@ -7,11 +7,11 @@
 </template>
 
 <script>
-    export default {
-        props: ['text']
-    }
+export default {
+    props: ['text']
+}
 </script>
 
 <style lang="scss" scoped>
-    @import "speechbubble";
+@import "speechbubble";
 </style>
