@@ -28,7 +28,7 @@ export default {
                 link: 'https://mies.me/feed/mp3/',
                 title: 'Herr Mies will\'s wissen Podcast Feed',
                 icon: 'podcast',
-                text: 'Podcast'
+                text: 'Podcast Feed'
             },
             {
                 link: 'https://twitter.com/herrmies',
