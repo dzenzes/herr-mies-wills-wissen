@@ -3,7 +3,7 @@
         <div class="header__container">
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li v-for="(item, index) in items" class="navigation__item" :class="{ 'navigation__item--active': item.active }">
+                    <li v-for="(item, index) in items" class="navigation__item" v-bind:class="item.classObject">
                         <a :href="item.link" :title="item.title">
                             <i :class="'fa fa-'+item.icon"></i>&nbsp;
                             <span class="navigation__text">{{item.text}}</span>
@@ -16,38 +16,53 @@
 </template>
 
 <script>
-export default {
-    data: () => ({
-        items: [
-            {
-                link: '/', title: 'Herr Mies will\'s wissen', icon: 'home', text: 'Home',
-                active: true
-
-            },
-            {
-                link: 'https://mies.me/feed/mp3/',
-                title: 'Herr Mies will\'s wissen Podcast Feed',
-                icon: 'podcast',
-                text: 'Podcast Feed'
-            },
-            {
-                link: 'https://twitter.com/herrmies',
-                title: 'Herr Mies will\'s wissen auf Twitter',
-                icon: 'twitter',
-                text: '@HerrMies',
-            },
-            {
-                link: 'https://github.com/dmies',
-                title: 'Herr Mies will\'s wissen auf GitHub',
-                icon: 'github',
-                text: 'GitHub'
-            },
-
-        ]
-    })
-}
+    export default {
+        data: () => ({
+            items: [
+                {
+                    link: '/', title: 'Herr Mies will\'s wissen', icon: 'home', text: 'Home',
+                    classObject: {
+                        'navigation__item--active': true,
+                    }
+                },
+                {
+                    link: '/', title: 'Alle Folgen', icon: 'list', text: 'Episoden',
+                    classObject: {
+                        'navigation__item--active': false,
+                    }
+                },
+                {
+                    link: 'https://mies.me/feed/mp3/',
+                    title: 'Herr Mies will\'s wissen Podcast Feed',
+                    icon: 'podcast',
+                    text: 'Podcast Feed',
+                    classObject: {
+                        'navigation__item--active': false,
+                    }
+                },
+                {
+                    link: 'https://twitter.com/herrmies',
+                    title: 'Herr Mies will\'s wissen auf Twitter',
+                    icon: 'twitter',
+                    text: '@HerrMies',
+                    classObject: {
+                        'navigation__item--active': false,
+                    }
+                },
+                {
+                    link: 'https://github.com/dmies',
+                    title: 'Herr Mies will\'s wissen auf GitHub',
+                    icon: 'github',
+                    text: 'GitHub',
+                    classObject: {
+                        'navigation__item--active': false,
+                    }
+                },
+            ]
+        })
+    }
 </script>
 
 <style lang="scss" scoped>
-@import "navigation";
+    @import "navigation";
 </style>

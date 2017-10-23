@@ -7,7 +7,6 @@ import NavigationComponent from "./components/navigation/Navigation.vue";
 import HeaderComponent from "./components/header/Header.vue";
 import LogoComponent from "./components/logo/Logo.vue";
 import IntroComponent from "./components/intro/Intro.vue";
-import SpeechbubbleComponent from "./components/speechbubble/Speechbubble.vue";
 
 Vue.use(VueCustomElement);
 
@@ -15,5 +14,4 @@ Vue.component("m-navigation", NavigationComponent);
 
 Vue.component("m-logo", LogoComponent);
 Vue.customElement("m-header", HeaderComponent);
-Vue.customElement("m-speechbubble", SpeechbubbleComponent);
 Vue.customElement("m-intro", IntroComponent);

@@ -22,3 +22,4 @@ function hmww_wp_setup()
 add_action('wp_enqueue_scripts', 'hmww_enqueue_styles');
 add_action('wp_enqueue_scripts', 'hmww_enqueue_scripts');
 add_action('after_setup_theme', 'hmww_wp_setup');
+add_theme_support( 'post-thumbnails' );
