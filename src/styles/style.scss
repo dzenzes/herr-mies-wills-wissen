@@ -1,4 +1,5 @@
 @import "palette";
+
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 @import url(http://fonts.googleapis.com/css?family=Rubik);
@@ -10,6 +11,7 @@ $line-height-base = 26
 html {
   font-size: 62.5%;
 }
+
 html,
 body {
   margin: 0 !important;
@@ -23,15 +25,49 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Rubik", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   background: $bgDark;
-  background-image: linear-gradient(
-    90deg,
-    $bgDark 0,
-    $bgLight 30%,
-    $bgLight 70%,
-    $bgDark
-  );
+  background-image: linear-gradient(90deg, $bgDark 0, $bgLight 30%, $bgLight 70%, $bgDark);
   color: $text;
+
 }
+
+
+.snow{
+  background: $bgDark;
+  background-image: url('../img/s1.png'), url('../img/s2.png'), url('../img/s3.png');
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index:1;
+  -webkit-animation: snow 10s linear infinite;
+  -moz-animation: snow 10s linear infinite;
+  -ms-animation: snow 10s linear infinite;
+  animation: snow 10s linear infinite;
+}
+@keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-moz-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+}
+@-webkit-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+@-ms-keyframes snow {
+  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
+  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+}
+
+
+
 
 h1,
 h2 {
@@ -63,58 +99,7 @@ p {
   grid-gap: 2.4rem;
 }
 
-.post {
-  background-color: #fff;
-  background-image: radial-gradient(circle at center, #ddd 0, #efefef 100%);
-  padding: 5px;
-  box-shadow: 0 0 2.4rem #cdcdcd;
 
-  &__inner {
-    background: #fff;
-  }
-
-  &__image {
-    position: relative;
-    overflow: hidden;
-    height: 210px;
-
-    img {
-      max-width: 100%;
-      height: auto;
-      width: auto;
-
-      -moz-transition: all 0.3s;
-      -webkit-transition: all 0.3s;
-      transition: all 0.3s;
-    }
-    &:hover img {
-      -moz-transform: scale(1.1);
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-    }
-  }
-
-  &__date {
-    padding: 2.4rem 2.4rem 0;
-    font-size: 1.6rem;
-    line-height: 1.625;
-  }
-  &__title {
-    margin: 0;
-    padding: 1.2rem 2.4rem 2.4rem;
-
-    font-size: 1.8rem;
-    line-height: 1.444;
-  }
-
-  &__link {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
 
 @media (max-width: 920px) {
   .posts {
@@ -134,6 +119,30 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2.4rem;
+  }
+
+  &_nav {
+    &__title {
+      font-weight: normal;
+      font-size: 1.8rem;
+      line-height: 1.444; /* $line-height-base ÷ 18 */
+    }
+  }
+}
+
+.about {
+  &__title {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 1.444; /* $line-height-base ÷ 18 */
+  }
+}
+
+.license {
+  &__title {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 1.444; /* $line-height-base ÷ 18 */
   }
 }
 

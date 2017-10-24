@@ -1,6 +1,7 @@
 @import "../../styles/palette";
+
 .intro {
-  margin: 2.4rem auto;
+  margin: 3rem auto 2.4rem;
   width: calc(75% - 10px);
   min-width: 650px;
   padding: 0.5rem;
@@ -17,13 +18,9 @@
   &__title {
     grid-column-start: 1;
     grid-column-end: span 2;
-    font-size: 2.6rem;
+    font-size: 4.1rem;
     line-height: 1;
     font-weight: normal;
     margin: 0;
-  }
-  &__logo {
-  }
-  &__text {
   }
 }

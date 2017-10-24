@@ -26,7 +26,7 @@
                     }
                 },
                 {
-                    link: '/', title: 'Alle Folgen', icon: 'list', text: 'Episoden',
+                    link: '/episoden', title: 'Alle Folgen', icon: 'list', text: 'Episoden',
                     classObject: {
                         'navigation__item--active': false,
                     }
