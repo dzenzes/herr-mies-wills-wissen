@@ -3,7 +3,7 @@
     <section class="page">
         <div class="page__inner">
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <h2 class="page_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                <h2 class="page__title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
                 <div class="page__content">
                     <div class="page_entry">
                         <?php the_content(); ?>

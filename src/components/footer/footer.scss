@@ -1,0 +1,37 @@
+@import "../../styles/palette";
+@import "../../styles/mixins";
+
+.footer {
+  margin: 0;
+  background: $bgLight;
+  box-shadow: 0 1px 3px $shadowBg, 0 1px 2px $shadowBg;
+  @include fontNormal(16);
+
+  &__inner {
+    margin: 0 auto;
+    width: 75%;
+    min-width: 650px;
+    padding: 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.4rem;
+  }
+
+  &_nav {
+    &__title {
+      @include fontLight(18);
+    }
+  }
+}
+
+.about {
+  &__title {
+    @include fontLight(18);
+  }
+}
+
+.license {
+  &__title {
+    @include fontLight(18);
+  }
+}

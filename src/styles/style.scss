@@ -1,13 +1,12 @@
+@import "reset";
 @import "palette";
+@import "mixins";
 
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
-@import url(http://fonts.googleapis.com/css?family=Rubik);
 
-/*
-$fontbase = 16
-$line-height-base = 26
-*/
+
+
 html {
   font-size: 62.5%;
 }
@@ -19,77 +18,100 @@ body {
 }
 
 body {
-  font-size: 1.6rem;
-  line-height: 1.625; /* $line-height-base ÷ $fontbase */
-
-  font-family: -apple-system, BlinkMacSystemFont, "Rubik", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   background: $bgDark;
-  background-image: linear-gradient(90deg, $bgDark 0, $bgLight 30%, $bgLight 70%, $bgDark);
+  background-image: linear-gradient(
+    90deg,
+    $bgDark 0,
+    $bgLight 30%,
+    $bgLight 70%,
+    $bgDark
+  );
   color: $text;
-
 }
 
-
-.snow{
+.snow {
   background: $bgDark;
-  background-image: url('../img/s1.png'), url('../img/s2.png'), url('../img/s3.png');
+  background-image: url("../img/s1.png"), url("../img/s2.png"),
+    url("../img/s3.png");
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  z-index:1;
+  z-index: 1;
   -webkit-animation: snow 10s linear infinite;
   -moz-animation: snow 10s linear infinite;
   -ms-animation: snow 10s linear infinite;
   animation: snow 10s linear infinite;
 }
 @keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
 }
 @-moz-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 400px 1000px, 200px 400px, 100px 300px;}
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 400px 1000px, 200px 400px, 100px 300px;
+  }
 }
 @-webkit-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
 }
 @-ms-keyframes snow {
-  0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
-  50% {background-position: 500px 500px, 100px 200px, -100px 150px;}
-  100% {background-position: 500px 1000px, 200px 400px, -100px 300px;}
+  0% {
+    background-position: 0 0, 0 0, 0 0;
+  }
+  50% {
+    background-position: 500px 500px, 100px 200px, -100px 150px;
+  }
+  100% {
+    background-position: 500px 1000px, 200px 400px, -100px 300px;
+  }
 }
 
-
-
-
+/*
 h1,
 h2 {
-  font-size: 2.6rem;
-  line-height: 1; /* $line-height-base ÷ 26 */
+  @include fontLight(26);
 }
 
 h3,
 h4 {
   font-size: 1.8rem;
-  line-height: 1.444; /* $line-height-base ÷ 18 */
+  line-height: 1.444;
 }
+*/
 
 a {
   color: $linkColor;
 }
-
+/*
 p {
   font-size: 1.6rem;
   line-height: 1.625;
 }
-
+*/
 .posts {
   margin: 2.4rem auto;
   width: 75%;
@@ -97,58 +119,30 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.4rem;
+
+  &__title {
+    @include fontLight(32);
+    margin: 0;
+    grid-column: 1 / 4;
+  }
 }
-
-
 
 @media (max-width: 920px) {
   .posts {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-.footer {
-  margin: 0;
-  background: $bgLight;
-
-  &__inner {
-    margin: 0 auto;
-    width: 75%;
-    min-width: 650px;
-    padding: 2.4rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2.4rem;
-  }
-
-  &_nav {
     &__title {
-      font-weight: normal;
-      font-size: 1.8rem;
-      line-height: 1.444; /* $line-height-base ÷ 18 */
+      grid-column: 1 / 3;
     }
   }
 }
 
-.about {
-  &__title {
-    font-weight: normal;
-    font-size: 1.8rem;
-    line-height: 1.444; /* $line-height-base ÷ 18 */
-  }
-}
 
-.license {
-  &__title {
-    font-weight: normal;
-    font-size: 1.8rem;
-    line-height: 1.444; /* $line-height-base ÷ 18 */
-  }
-}
 
 .page {
   background: #fff;
   overflow: hidden;
+
   &__inner {
     margin: 0 auto;
     width: 75%;
@@ -156,7 +150,14 @@ p {
     padding: 2.4rem;
   }
 
+  &__title {
+    @include fontLight(32);
+    margin: 0;
+    grid-column: 1 / 4;
+  }
+
   &__content {
+    @include fontNormal(16);
     display: grid;
     grid-template-columns: 1fr 240px;
     grid-gap: 2.4rem;

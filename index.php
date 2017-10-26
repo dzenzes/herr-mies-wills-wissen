@@ -3,6 +3,7 @@
 
     <m-intro path="<?php echo get_bloginfo('template_url') ?>/img/profilbild.png"></m-intro>
     <div class="posts">
+        <h2 class="posts__title">Die neusten Folgen</h2>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <m-post
                 <?php if (has_post_thumbnail()): ?>
