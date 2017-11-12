@@ -28,3 +28,12 @@
     margin: 0;
   }
 }
+
+@media (max-width: 920px) {
+  .intro {
+    margin: 3rem auto 2.4rem;
+    width: calc(95% - 10px);
+    padding: 0.5rem;
+    min-width: unset;
+  }
+}

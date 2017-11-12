@@ -50,15 +50,6 @@ export default {
         classObject: {
           "navigation__item--active": false
         }
-      },
-      {
-        link: "https://github.com/dmies",
-        title: "Herr Mies will's wissen auf GitHub",
-        icon: "github",
-        text: "GitHub",
-        classObject: {
-          "navigation__item--active": false
-        }
       }
     ]
   })

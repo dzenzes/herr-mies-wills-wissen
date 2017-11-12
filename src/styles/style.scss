@@ -129,6 +129,10 @@ p {
 
 @media (max-width: 920px) {
   .posts {
+    margin: 3rem auto 2.4rem;
+    width: calc(95% - 10px);
+    padding: 0.5rem;
+    min-width: unset;
     grid-template-columns: repeat(2, 1fr);
 
     &__title {
