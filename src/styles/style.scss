@@ -5,8 +5,6 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
-
-
 html {
   font-size: 62.5%;
 }
@@ -141,7 +139,20 @@ p {
   }
 }
 
+@media (max-width: 420px) {
+  .posts {
+    margin: 3rem 0 2.4rem;
+    width: calc(95% - 10px);
+    padding: 0.5rem;
+    min-width: unset;
+    display: block;
 
+    &__title {
+      margin-bottom: 1rem;
+      display: block;
+    }
+  }
+}
 
 .page {
   background: #fff;

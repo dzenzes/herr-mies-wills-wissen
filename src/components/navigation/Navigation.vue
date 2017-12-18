@@ -21,7 +21,8 @@ export default {
         icon: "home",
         text: "Home",
         classObject: {
-          "navigation__item--active": true
+          "navigation__item--active":
+            document.URL.endsWith(".me/") || document.URL.endsWith(".dev/")
         }
       },
       {
@@ -30,14 +31,14 @@ export default {
         icon: "list",
         text: "Episoden",
         classObject: {
-          "navigation__item--active": false
+          "navigation__item--active": document.URL.indexOf("episoden") > 0
         }
       },
       {
         link: "https://mies.me/feed/mp3/",
-        title: "Herr Mies will's wissen Podcast Feed",
+        title: "Der Feed zum Podcast",
         icon: "podcast",
-        text: "Podcast Feed",
+        text: "Subscribe",
         classObject: {
           "navigation__item--active": false
         }

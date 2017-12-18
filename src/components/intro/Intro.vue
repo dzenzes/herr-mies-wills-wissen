@@ -16,18 +16,22 @@
                     abonniert werden und ist ebenfalls im
                     <a class="hello_abo"
                        href="https://itunes.apple.com/de/podcast/herr-mies-wills-wissen/id1257454170?l=en">iTunes Store</a>
-                    gelistet.</p>
+                    gelistet.
+                </p>
+                <div class="intro__buttons">
+                    <a href="https://itunes.apple.com/de/podcast/herr-mies-wills-wissen/id1257454170?mt=2" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/de-de/podcast-lrg.svg) no-repeat;width:133px;height:34px;background-size:contain;"></a>
+                </div>
             </section>
         </div>
     </section>
 </template>
 
 <script>
-    export default {
-        props: ['path']
-    }
+export default {
+  props: ["path"]
+};
 </script>
 
 <style lang="scss" scoped>
-    @import "intro";
+@import "intro";
 </style>

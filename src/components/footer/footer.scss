@@ -2,6 +2,7 @@
 @import "../../styles/mixins";
 
 .footer {
+  width: 100%;
   margin: 0;
   background: $bgLight;
   box-shadow: 0 1px 3px $shadowBg, 0 1px 2px $shadowBg;
@@ -13,7 +14,7 @@
     min-width: 650px;
     padding: 2.4rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2.4rem;
   }
 
@@ -28,10 +29,21 @@
   &__title {
     @include fontLight(18);
   }
+
+  &__text {
+    @include fontNormal(14);
+    padding-left: 1.7em;
+    margin-bottom: 1em;
+  }
 }
 
 .license {
   &__title {
     @include fontLight(18);
+  }
+  &__text {
+    @include fontNormal(14);
+    padding-left: 1.7em;
+    margin-bottom: 1em;
   }
 }
