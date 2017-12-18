@@ -30,5 +30,5 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body class="snow">
 <m-header></m-header>
