@@ -35,7 +35,7 @@
             <h2 class="footer_nav__title"><i class="fa fa-map-signs"></i>&nbsp;Navigation</h2>
             <ul class="footer_nav__items footer_nav">
                 <li><a class="footer_nav__link" href="/">Home</a></li>
-                <li><a class="footer_nav__link" href="/episoden">Episoden</a></li>
+                <!--                <li><a class="footer_nav__link" href="/episoden">Episoden</a></li>-->
                 <li><a class="footer_nav__link" href="/feed/mp3/">Podcast Feed</a></li>
                 <li><a class="footer_nav__link" href="https://twitter.com/herrmies">Twitter</a></li>
                 <li><a class="footer_nav__link" href="https://github.com/dmies/herr-mies-wills-wissen">Github</a></li>

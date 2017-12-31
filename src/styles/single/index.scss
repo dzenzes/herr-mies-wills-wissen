@@ -12,6 +12,7 @@
     grid-column-start: 1;
     grid-column-end: span 2;
     margin: 3rem 0;
+    color: $headingColor;
   }
 
 }
@@ -53,6 +54,7 @@
     @include fontLight(18);
     margin: 0;
     padding: 1.2rem 2.4rem 2.4rem;
+    color: $headingColor;
   }
 
   &__link {
