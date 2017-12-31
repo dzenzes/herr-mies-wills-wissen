@@ -1,11 +1,11 @@
-@import "../../styles/palette";
-@import "../../styles/mixins";
+@import "../../palette";
+@import "../../mixins";
 
 .navigation {
   &__list {
     display: grid;
     list-style: none;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin: 0;
     padding: 0;
   }

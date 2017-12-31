@@ -30,5 +30,9 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="snow">
-<m-header></m-header>
+<body>
+<header class="header">
+    <div class="header__container">
+        <m-navigation></m-navigation>
+    </div>
+</header>

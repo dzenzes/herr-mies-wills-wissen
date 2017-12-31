@@ -1,16 +1,15 @@
-@import "../../styles/palette";
-@import "../../styles/mixins";
+@import "../palette";
+@import "../mixins";
 
 .post {
-  background-color: #fff;
-  /*background-image: radial-gradient(circle at center, #ddd 0, #efefef 100%);
+  background-image: radial-gradient(circle at center, #ddd 0, #efefef 100%);
   padding: 5px;
   box-shadow: 0 0 2.4rem #cdcdcd;
-  */
+
   @include card();
 
   &__inner {
-    //background: #fff;
+    background: #fff;
   }
 
   &__image {
@@ -53,5 +52,16 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  &__content {
+    @include fontNormal(14);
+    padding: 2.4rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .post {
+    margin-bottom: 2.4rem;
   }
 }

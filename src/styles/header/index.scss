@@ -1,4 +1,5 @@
-@import "../../styles/palette";
+@import "navigation/index";
+@import "../palette";
 
 .header {
   background: $navigationBg;
@@ -22,7 +23,7 @@
 
     &__container {
       width: 100%;
-      min-width: 100%;
+      min-width: unset;
     }
   }
 }

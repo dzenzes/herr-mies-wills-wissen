@@ -1,6 +1,11 @@
 @import "reset";
 @import "palette";
 @import "mixins";
+@import "header/index";
+@import "index/index";
+@import "footer/index";
+@import "post/index";
+@import "single/index";
 
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
@@ -19,74 +24,15 @@ body {
   -webkit-font-smoothing: antialiased;
   background: $bgDark;
   background-image: linear-gradient(
-    90deg,
-    $bgDark 0,
-    $bgLight 30%,
-    $bgLight 70%,
-    $bgDark
+                  90deg,
+                  $bgDark 0,
+                  $bgLight 30%,
+                  $bgLight 70%,
+                  $bgDark
   );
   color: $text;
 }
 
-.snow {
-  background: $bgDark;
-  background-image: url("../img/s1.png"), url("../img/s2.png"),
-    url("../img/s3.png");
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  -webkit-animation: snow 10s linear infinite;
-  -moz-animation: snow 10s linear infinite;
-  -ms-animation: snow 10s linear infinite;
-  animation: snow 10s linear infinite;
-}
-@keyframes snow {
-  0% {
-    background-position: 0 0, 0 0, 0 0;
-  }
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px;
-  }
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px;
-  }
-}
-@-moz-keyframes snow {
-  0% {
-    background-position: 0 0, 0 0, 0 0;
-  }
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px;
-  }
-  100% {
-    background-position: 400px 1000px, 200px 400px, 100px 300px;
-  }
-}
-@-webkit-keyframes snow {
-  0% {
-    background-position: 0 0, 0 0, 0 0;
-  }
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px;
-  }
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px;
-  }
-}
-@-ms-keyframes snow {
-  0% {
-    background-position: 0 0, 0 0, 0 0;
-  }
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px;
-  }
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px;
-  }
-}
 
 /*
 h1,
@@ -104,6 +50,7 @@ h4 {
 a {
   color: $linkColor;
 }
+
 /*
 p {
   font-size: 1.6rem;
@@ -141,9 +88,11 @@ p {
 
 @media (max-width: 420px) {
   .posts {
-    margin: 3rem 0 2.4rem;
-    width: calc(95% - 10px);
+    margin: 3rem auto 2.4rem;
+    width: unset;
+    min-width: unset;
     padding: 0.5rem;
+
     min-width: unset;
     display: block;
 
@@ -154,21 +103,33 @@ p {
   }
 }
 
-.page {
-  background: #fff;
-  overflow: hidden;
 
-  &__inner {
-    margin: 0 auto;
-    width: 75%;
-    min-width: 650px;
-    padding: 2.4rem;
+
+.page {
+  @include card();
+  margin: 3rem auto 2.4rem;
+  width: calc(75% - 10px);
+  min-width: 650px;
+  padding: 0.5rem;
+
+  &:hover {
+    // override card mixin hover effect
+    box-shadow: 0 1px 3px $shadowBg, 0 1px 2px $shadowBg;
   }
 
+  &__inner {
+    @include fontNormal(16);
+    background: #fff;
+    padding: 2.4rem;
+    display: grid;
+    grid-template-columns: 184px auto;
+    grid-gap: 2.4rem;
+  }
   &__title {
-    @include fontLight(32);
+    @include fontLight(44);
+    grid-column-start: 1;
+    grid-column-end: span 2;
     margin: 0;
-    grid-column: 1 / 4;
   }
 
   &__content {

@@ -7,7 +7,6 @@ Template Name: Archives
 get_header();
 ?>
 
-
     <article>
 
         <?php // Display blog posts on any page @ https://m0n.co/l

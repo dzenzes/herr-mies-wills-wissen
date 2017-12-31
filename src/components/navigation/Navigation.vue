@@ -25,7 +25,7 @@ export default {
             document.URL.endsWith(".me/") || document.URL.endsWith(".dev/")
         }
       },
-      {
+     /* {
         link: "/episoden",
         title: "Alle Folgen",
         icon: "list",
@@ -33,7 +33,7 @@ export default {
         classObject: {
           "navigation__item--active": document.URL.indexOf("episoden") > 0
         }
-      },
+      },*/
       {
         link: "https://mies.me/feed/mp3/",
         title: "Der Feed zum Podcast",
@@ -58,5 +58,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "navigation";
 </style>
