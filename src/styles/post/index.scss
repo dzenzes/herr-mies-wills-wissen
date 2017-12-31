@@ -1,0 +1,66 @@
+@import "../palette";
+@import "../mixins";
+
+.post {
+  background-image: radial-gradient(circle at center, #ddd 0, #efefef 100%);
+  padding: 5px;
+  box-shadow: 0 0 2.4rem #cdcdcd;
+
+  @include card();
+
+  &__inner {
+    background: #fff;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    height: 210px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+  }
+
+  &:hover .post__image img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  &__date {
+    @include fontLight(14);
+    padding: 1.2rem 2.4rem 0;
+  }
+  &__title {
+    @include fontLight(18);
+    margin: 0;
+    padding: 1.2rem 2.4rem 2.4rem;
+    color: $headingColor;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__content {
+    @include fontNormal(14);
+    padding: 2.4rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .post {
+    margin-bottom: 2.4rem;
+  }
+}

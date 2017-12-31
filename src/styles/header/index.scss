@@ -1,0 +1,29 @@
+@import "navigation/index";
+@import "../palette";
+
+.header {
+  background: $navigationBg;
+  box-shadow: 0 1px 3px $shadowBg, 0 1px 2px $shadowBg;
+
+  &__container {
+    margin: 0 auto;
+    width: 75%;
+    min-width: 650px;
+  }
+}
+
+@media (max-width: 920px) {
+  .header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    z-index: 1000;
+
+    &__container {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+}

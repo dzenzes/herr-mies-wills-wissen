@@ -1,0 +1,41 @@
+@import "palette";
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,700");
+
+$fontbase: 16;
+$line-height-base: 26;
+
+@mixin font($fontSize) {
+  font-size: $fontSize/ 10 +0rem;
+  line-height: 130%; //$line-height-base / $fontSize;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Rubik", "Arial", sans-serif;
+}
+
+@mixin fontLight($fontSize) {
+  @include font($fontSize);
+  font-weight: 300;
+}
+
+@mixin fontNormal($fontSize) {
+  @include font($fontSize);
+  font-weight: 400;
+}
+
+@mixin fontBold($fontSize) {
+  @include font($fontSize);
+  font-weight: 700;
+}
+
+@mixin card() {
+  // background: $white;
+  border-radius: 2px;
+  display: block;
+  position: relative;
+
+  box-shadow: 0 1px 3px $shadowBg, 0 1px 2px $shadowBg;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    box-shadow: 0 14px 28px $shadowBgHover, 0 10px 10px $shadowBgHover2;
+  }
+}

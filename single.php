@@ -1,24 +1,29 @@
 <?php get_header(); ?>
- 
-<div class="page">
-   
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<h2 class="page_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-		<div class="page_entry">
-			<?php the_content(); ?>
-		</div>
-	<?php endwhile; endif; ?>
-	
-	<div class="meta">
-		<p class="meta_about">
-			<b class="meta_title"><i>Herr Mies will's wissen</i></b> ist die zweiwöchige Interview-Reihe rund um IT Themen von und mit Daniel Mies.
-		</p>
-		<p class="meta_links">
-			Der Podcast kann via <a class="hello_abo" href="https://mies.me/feed/mp3/">RSS</a> abonniert werden und ist ebenfalls im <a class="hello_abo" href="https://itunes.apple.com/de/podcast/herr-mies-wills-wissen/id1257454170?l=en">iTunes Store</a> gelistet.
-		</p>
-	</div>
-         
-</div>
- 
- 
+    <section class="singles">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <div class="singles_item">
+                <h2 class="singles__title"><?php the_title(); ?></h2>
+                <article class="single">
+                    <div class="single__inner">
+                        <section class="single__content">
+                            <?php if (has_post_thumbnail()): ?>
+                                <div class="single__image">
+                                    <img src="<?php the_post_thumbnail_url('medium'); ?>"/>
+                                </div>
+                            <?php endif; ?>
+                            <?php the_content(); ?>
+                        </section>
+                    </div>
+                </article>
+            </div>
+
+
+            <?php /*// If comments are open or we have at least one comment, load up the comment template.
+            if (comments_open() || get_comments_number()) :
+                comments_template();
+            endif; */?>
+        <?php endwhile; endif; ?>
+    </section>
+
+
 <?php get_footer();
