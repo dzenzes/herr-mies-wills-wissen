@@ -54,6 +54,14 @@ p {
   margin: 1.2rem 0;
 }
 
+b, strong {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
 ul {
   list-style: disc;
   padding-left: 1.2rem;
@@ -63,7 +71,6 @@ ol {
   list-style: decimal;
   padding-left: 1.2rem;
 }
-
 
 .page {
   @include card();
