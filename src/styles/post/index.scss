@@ -52,6 +52,10 @@
       text-decoration: underline;
     }
   }
+  
+  &__player{
+    text-align: center;
+  }
 
   &__content {
     @include fontNormal(14);

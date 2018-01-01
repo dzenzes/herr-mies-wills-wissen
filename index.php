@@ -37,13 +37,13 @@ get_header(); ?>
             <section class="latest_post">
                 <article class="post">
                     <div class="post__inner">
-                        <div>
+                        <section class="post__player">
                             <?php
 
                             $episode = \Podlove\get_episode();
                             echo $episode->player(['context' => 'landing-page']);
                             ?>
-                        </div>
+                        </section>
                         <div class="post__date"><?php the_time('d.m.Y'); ?></div>
                         <h2 class="post__title">
                             <a href="<?php the_permalink(); ?>" title="Link zur Episode '<?php the_permalink(); ?>'"

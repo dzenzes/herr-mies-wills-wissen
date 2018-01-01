@@ -4,13 +4,13 @@
             <div class="singles_item">
                 <h2 class="singles__title"><?php the_title(); ?></h2>
                 <article class="single">
+                    <?php if (has_post_thumbnail()): ?>
+                        <div class="single__image">
+                            <img src="<?php the_post_thumbnail_url('large'); ?>"/>
+                        </div>
+                    <?php endif; ?>
                     <div class="single__inner">
                         <section class="single__content">
-                            <?php if (has_post_thumbnail()): ?>
-                                <div class="single__image">
-                                    <img src="<?php the_post_thumbnail_url('medium'); ?>"/>
-                                </div>
-                            <?php endif; ?>
                             <?php the_content(); ?>
                         </section>
                     </div>
@@ -21,7 +21,7 @@
             <?php /*// If comments are open or we have at least one comment, load up the comment template.
             if (comments_open() || get_comments_number()) :
                 comments_template();
-            endif; */?>
+            endif; */ ?>
         <?php endwhile; endif; ?>
     </section>
 
