@@ -67,28 +67,14 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(pathsToClean, cleanOptions),
-        new ExtractTextPlugin("./styles.css?[hash]")
-    ]
-};
-
-if (process.env.NODE_ENV === "production") {
-    module.exports.devtool = "#source-map";
-    // http://vue-loader.vuejs.org/en/workflow/production.html
-    module.exports.plugins = (module.exports.plugins || []).concat([
+        new ExtractTextPlugin("./styles.css?[hash]"),
         new webpack.DefinePlugin({
             "process.env": {
-                NODE_ENV: '"production"'
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            // uncomment to enable sourcemap
-            // sourceMap: true,
-            compress: {
-                warnings: false
+                NODE_ENV: 'production'
             }
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true
         })
-    ]);
-}
+    ]
+};

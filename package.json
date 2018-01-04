@@ -1,10 +1,10 @@
 {
   "name": "HMww",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "Theme for my podcast",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && cross-env NODE_ENV=production webpack --watch"
+    "build": "rimraf dist && cross-env NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",

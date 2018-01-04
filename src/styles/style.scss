@@ -6,6 +6,7 @@
 @import "footer/index";
 @import "post/index";
 @import "single/index";
+@import "page/index";
 
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
@@ -74,40 +75,4 @@ ul {
 ol {
   list-style: decimal;
   padding-left: 1.2rem;
-}
-
-.page {
-  @include card();
-  margin: 3rem auto 2.4rem;
-  width: calc(75% - 10px);
-  min-width: 650px;
-  padding: 0.5rem;
-
-  &:hover {
-    // override card mixin hover effect
-    box-shadow: 0 1px 3px $shadowBg, 0 1px 2px $shadowBg;
-  }
-
-  &__inner {
-    @include fontNormal(16);
-    background: #fff;
-    padding: 2.4rem;
-    display: grid;
-    grid-template-columns: 184px auto;
-    grid-gap: 2.4rem;
-  }
-  &__title {
-    @include fontLight(44);
-    grid-column-start: 1;
-    grid-column-end: span 2;
-    margin: 0;
-    color: $headingColor;
-  }
-
-  &__content {
-    @include fontNormal(16);
-    display: grid;
-    grid-template-columns: 1fr 240px;
-    grid-gap: 2.4rem;
-  }
 }

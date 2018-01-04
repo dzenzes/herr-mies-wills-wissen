@@ -1,13 +1,13 @@
 <?php get_header(); ?>
-    <section class="singles">
+    <section class="pages">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <div class="singles_item">
-                <h2 class="singles__title"><?php the_title(); ?></h2>
-                <article class="single">
-                    <div class="single__inner">
-                        <section class="single__content">
+            <div class="pages_item">
+                <h2 class="pages__title"><?php the_title(); ?></h2>
+                <article class="page">
+                    <div class="page__inner">
+                        <section class="page__content">
                             <?php if (has_post_thumbnail()): ?>
-                                <div class="single__image">
+                                <div class="page__image">
                                     <img src="<?php the_post_thumbnail_url('medium'); ?>"/>
                                 </div>
                             <?php endif; ?>
