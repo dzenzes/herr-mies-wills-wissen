@@ -31,8 +31,9 @@
 </head>
 
 <body>
-<header class="header">
-    <div class="header__container">
-        <m-navigation></m-navigation>
-    </div>
-</header>
+<div id="app">
+    <header class="header">
+        <div class="header__container">
+            <m-navigation></m-navigation>
+        </div>
+    </header>

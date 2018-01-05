@@ -1,0 +1,115 @@
+@import "../../palette";
+@import "../../mixins";
+
+.comments {
+  margin: 2.4rem 0;
+  width: 100%;
+  min-width: 650px;
+  display: block;
+
+  &__title {
+    @include fontLight(32);
+    margin: 0;
+    color: $headingColor;
+  }
+  &__list {
+    padding: 0;
+    list-style: none;
+
+    .comment {
+      @include card();
+      padding: 5px;
+      margin-bottom: 2.4rem;
+/*
+      &.byuser .comment-body {
+        background: red;
+      }
+*/
+      &-body {
+        background: #fff;
+        padding: 2.4rem;
+        @include fontNormal(14);
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+      }
+      &-author {
+        .avatar {
+          float: left;
+          margin: 0 1.2rem 1.2rem 0;
+        }
+      }
+      &meta {
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 920px) {
+  .comments {
+    margin: 3rem auto 2.4rem;
+    padding: 0.5rem;
+    min-width: unset;
+
+    &__title {
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .comments {
+    margin: 3rem auto 2.4rem;
+    width: unset;
+    min-width: unset;
+    padding: 0.5rem;
+
+    &__title {
+      margin-bottom: 1rem;
+      display: block;
+    }
+  }
+}
+
+.comment {
+  &-respond {
+    @include card();
+    padding: 5px;
+  }
+
+  &-reply-title {
+    @include fontLight(24);
+    background: #fff;
+    margin: 0;
+    padding: 2.4rem 2.4rem 0;
+    color: $headingColor;
+  }
+
+  &-form {
+    background: #fff;
+    padding: 1px 2.4rem 2.4rem;
+    display: block;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+
+  &-notes {
+    @include fontNormal(14);
+  }
+
+  &-form-comment,
+  &-form-author,
+  &-form-email,
+  &-form-url {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    @include fontLight(14);
+    margin:2.4rem 0;
+  }
+}

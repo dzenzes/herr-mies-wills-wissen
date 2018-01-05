@@ -19,7 +19,7 @@ module.exports = {
     resolve: {
         extensions: [".js", ".vue"],
         alias: {
-            vue: "vue/dist/vue.js"
+            vue: 'vue/dist/vue.js'
         }
     },
     module: {
@@ -27,9 +27,6 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: "babel-loader",
-                options: {
-                    presets: ['env']
-                },
                 exclude: /node_modules/
             },
             {
@@ -69,8 +66,8 @@ module.exports = {
         new CleanWebpackPlugin(pathsToClean, cleanOptions),
         new ExtractTextPlugin("./styles.css?[hash]"),
         new webpack.DefinePlugin({
-            "process.env": {
-                NODE_ENV: 'production'
+            'process.env': {
+                NODE_ENV: '"production"'
             }
         }),
         new webpack.LoaderOptionsPlugin({

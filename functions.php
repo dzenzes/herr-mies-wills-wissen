@@ -1,9 +1,10 @@
 <?php
+$VERSION = "2.2.0";
 
 function hmww_enqueue_styles()
 {
     //wp_enqueue_style('main', get_template_directory_uri() . '/css/style.css?v=160717-5');
-    wp_enqueue_style('main', get_template_directory_uri() . '/dist/styles.css?v=2.2.0');
+    wp_enqueue_style('main', get_template_directory_uri() . '/dist/styles.css?v=2.2.0', $deps = array(), $ver = $VERSION);
 }
 
 function hmww_enqueue_scripts()
@@ -11,7 +12,7 @@ function hmww_enqueue_scripts()
     /*
     $dependencies = array('jquery');
     */
-    wp_enqueue_script('app', get_template_directory_uri() . '/dist/app.js?v=2.2.0');
+    wp_enqueue_script('app', get_template_directory_uri() . '/dist/app.js?v=2.2.0', $deps = array(), $ver = $VERSION, $in_footer = true);
 }
 
 function hmww_wp_setup()
