@@ -32,9 +32,5 @@
 
 <body>
 <div id="app">
-    <header class="header">
-        <div class="header__container">
-            <m-navigation></m-navigation>
-        </div>
-    </header>
+    <m-header></m-header>
 </div>
