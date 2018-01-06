@@ -1,10 +1,10 @@
 <?php
-$VERSION = "2.2.0";
+$VERSION = "v2.2.0";
 
 function hmww_enqueue_styles()
 {
     //wp_enqueue_style('main', get_template_directory_uri() . '/css/style.css?v=160717-5');
-    wp_enqueue_style('main', get_template_directory_uri() . '/dist/styles.css?v=2.2.0', $deps = array(), $ver = $VERSION);
+    wp_enqueue_style('main', get_template_directory_uri() . '/dist/styles.css', $deps = array(), $ver = $VERSION);
 }
 
 function hmww_enqueue_scripts()
@@ -12,7 +12,7 @@ function hmww_enqueue_scripts()
     /*
     $dependencies = array('jquery');
     */
-    wp_enqueue_script('app', get_template_directory_uri() . '/dist/app.js?v=2.2.0', $deps = array(), $ver = $VERSION, $in_footer = true);
+    wp_enqueue_script('app', get_template_directory_uri() . '/dist/app.js', $deps = array(), $ver = $VERSION, $in_footer = true);
 }
 
 function hmww_wp_setup()
@@ -27,7 +27,7 @@ add_theme_support( 'post-thumbnails' );
 
 // offset the main query on the home page
 function offset_main_query ( $query ) {
-    if ( $query->is_home() && $query->is_main_query() ) {
+    if ( !$query->is_paged() && $query->is_home() && $query->is_main_query() ) {
         $query->set( 'offset', '1' );
     }
 }
