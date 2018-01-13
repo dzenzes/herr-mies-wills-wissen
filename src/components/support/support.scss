@@ -1,0 +1,56 @@
+@import "../../styles/palette";
+@import "../../styles/mixins";
+
+.support {
+  margin: 2.4rem auto;
+  width: 75%;
+  min-width: 650px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2.4rem;
+}
+
+.card {
+  background-image: radial-gradient(circle at center, #ddd 0, #efefef 100%);
+  padding: 5px;
+  box-shadow: 0 0 2.4rem #cdcdcd;
+  @include card();
+
+  &__inner {
+    background: #fff;
+    padding: 2.4rem;
+    @include fontNormal(14);
+  }
+
+  &__title {
+    @include fontLight(32);
+    margin: 0;
+    grid-column: 1 / 4;
+    color: $headingColor;
+  }
+}
+
+@media (max-width: 920px) {
+  .support {
+    margin: 3rem auto 2.4rem;
+    width: calc(95% - 10px);
+    padding: 0.5rem;
+    min-width: unset;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .support {
+    margin: 3rem auto 2.4rem;
+    width: unset;
+    min-width: unset;
+    padding: 0.5rem;
+
+    display: block;
+  }
+
+  .card {
+    margin-bottom: 2.4rem;
+  }
+}

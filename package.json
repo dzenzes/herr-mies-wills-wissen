@@ -1,6 +1,6 @@
 {
   "name": "HMww",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Theme for my podcast",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "url-loader": "^0.6.2",
     "vue": "^2.5.13",
     "vue-custom-element": "^2.0.1",
-    "vue-loader": "^13.6.2",
+    "vue-loader": "^13.7.0",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0"
   }

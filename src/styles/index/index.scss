@@ -1,4 +1,3 @@
-@import "intro/index";
 @import "latest/index";
 @import "logo/index";
 @import "posts/index";
@@ -6,7 +5,7 @@
 .snow {
   background: $bgDark;
   background-image: url("../img/s1.png"), url("../img/s2.png"),
-  url("../img/s3.png");
+    url("../img/s3.png");
   height: 100%;
   left: 0;
   position: absolute;

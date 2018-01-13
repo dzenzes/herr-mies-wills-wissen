@@ -1,5 +1,5 @@
-@import "../../palette";
-@import "../../mixins";
+@import "../../styles/palette";
+@import "../../styles/mixins";
 
 .intro {
   @include card();
@@ -23,8 +23,6 @@
   }
   &__title {
     @include fontLight(44);
-    grid-column-start: 1;
-    grid-column-end: span 2;
     margin: 0;
     color: $headingColor;
   }
@@ -51,4 +49,3 @@
     }
   }
 }
-

@@ -40,6 +40,7 @@
                 <li><a class="footer_nav__link" href="https://twitter.com/herrmies">Twitter</a></li>
                 <li><a class="footer_nav__link" href="https://github.com/dmies/herr-mies-wills-wissen">Github</a></li>
                 <li><a class="footer_nav__link" href="/impressum">Impressum</a></li>
+                <li><a class="footer_nav__link" href="/datenschutzerklaerung">Datenschutzerkl&auml;rung</a></li>
             </ul>
         </nav>
     </div>
