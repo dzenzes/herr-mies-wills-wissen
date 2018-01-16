@@ -4,11 +4,6 @@
             <div class="singles_item">
                 <h2 class="singles__title"><?php the_title(); ?></h2>
                 <article class="single">
-                    <?php if (has_post_thumbnail()): ?>
-                        <div class="single__image">
-                            <img src="<?php the_post_thumbnail_url('large'); ?>"/>
-                        </div>
-                    <?php endif; ?>
                     <div class="single__inner">
                         <section class="single__content">
                             <?php the_content(); ?>

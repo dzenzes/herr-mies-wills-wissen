@@ -1,12 +1,6 @@
 <?php
 get_header(); ?>
-    <?php if (!is_paged()) : ?>
-    <m-intro></m-intro>
-    <m-support></m-support>
-    <?php endif; ?>
-    </div>
-    <!-- end of #app -->
-    <?php if (have_posts()) : ?>
+ <?php if (have_posts()) : ?>
     <?php if (!is_paged()) : ?>
     <?php
         $args = array(

@@ -49,27 +49,16 @@
 
 .single {
   background-image: radial-gradient(circle at center, #ddd 0, #efefef 100%);
-  padding: 0 0 5px 0;
+  padding: 5px;
   box-shadow: 0 0 2.4rem #cdcdcd;
 
   @include card();
 
   &__inner {
     background: #fff;
-    margin: 5px 5px 0 5px;
   }
 
-  &__image {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
 
-    img {
-      max-width: 100%;
-      height: auto;
-      width: auto;
-    }
-  }
 
   &__date {
     @include fontLight(16);
