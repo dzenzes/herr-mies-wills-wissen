@@ -35,7 +35,6 @@
     <m-header></m-header>
     <?php if (is_home() && !is_paged()) : ?>
         <m-intro></m-intro>
-        <m-support></m-support>
     <?php endif; ?>
 </div>
 <!-- end of #app -->

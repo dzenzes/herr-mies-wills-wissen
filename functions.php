@@ -1,5 +1,5 @@
 <?php
-$VERSION = "v2.2.2";
+$VERSION = "v2.2.3";
 
 function hmww_enqueue_styles()
 {
