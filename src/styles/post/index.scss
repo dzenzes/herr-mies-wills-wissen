@@ -16,9 +16,12 @@
   &__image {
     position: relative;
     overflow: hidden;
-    height: 210px;
+    padding-top: 100%;
 
     img {
+      position: absolute;
+      top: 0;
+      left: 0;
       max-width: 100%;
       height: auto;
       width: auto;
@@ -54,7 +57,7 @@
     }
   }
 
-  &__player{
+  &__player {
     text-align: center;
   }
 
