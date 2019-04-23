@@ -4,8 +4,6 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 
-const pathsToClean = ["dist"];
-
 const cleanOptions = {
   verbose: true,
   dry: false
@@ -59,7 +57,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(pathsToClean, cleanOptions),
+    new CleanWebpackPlugin(cleanOptions),
     new MiniCssExtractPlugin({ filename: "styles.css?[hash]" }),
     new webpack.DefinePlugin({
       "process.env": {
